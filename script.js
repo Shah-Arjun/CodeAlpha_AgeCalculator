@@ -1,5 +1,5 @@
-document.getElementById("ageForm").addEventListener("submit", function() {
-    e.preventDefault();
+document.getElementById("ageForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent page reload
 
     let day = parseInt(document.getElementById("day").value)
     let month = parseInt(document.getElementById("month").value)
@@ -16,12 +16,13 @@ document.getElementById("ageForm").addEventListener("submit", function() {
     
     if(birthDate > today){
         document.getElementById("result").innerText = "⚠️ Birth date cannot be in future!";
+        return;
     }
 
 
     let ageYears = today.getFullYear() - birthDate.getFullYear()
     let ageMonths = today.getMonth() - birthDate.getMonth()
-    let ageDays = today.getDay() - birthDate.getDate()
+    let ageDays = today.getDate() - birthDate.getDate()
 
     // adjust months and days
     if(ageDays < 0){
@@ -30,11 +31,11 @@ document.getElementById("ageForm").addEventListener("submit", function() {
         ageDays += prevMonth.getDate()
     }
 
-    if(month < 0){
+    if(ageMonths < 0){
         ageYears--
         ageMonths += 12
     }
 
-    document.getElementById("result"),this.innerText = `🎉 You are ${ageYears} years, ${ageMonths} months and ${ageDays} days old.`
+    document.getElementById("result").innerText = `🎉 You are ${ageYears} years, ${ageMonths} months and ${ageDays} days old.`
 
 })
