@@ -16,3 +16,12 @@ Users can enter their Date of Birth (day, month, year) and get their exact age i
 HTML – Structure
 CSS – Styling
 JavaScript – Logic & Age Calculation
+
+📖 Key Concepts Covered
+DOM Manipulation
+JavaScript Date & Time handling
+Input validation
+User-friendly UI design
+
+📸 Demo
+(Add screenshot or live demo link here)
