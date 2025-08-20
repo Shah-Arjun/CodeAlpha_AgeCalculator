@@ -12,21 +12,22 @@
 
     <div class="container">
         <h2>Age Calculator</h2>
-        <form>
+        <form id="ageFrom">
             <label for="day">Day:</label>
-            <input type="number" min="1" max="31">
+            <input type="number" id="day" min="1" max="31">
 
             <label for="month">Month:</label>
-            <input type="number" min="1" max="12">
+            <input type="number" id="month" min="1" max="12">
 
             <label for="year">Year:</label>
-            <input type="number" min="1900" max="2100">
+            <input type="number" id="year" min="1900" max="2100">
 
             <button type="submit">Calculate Age</button>
         </form>
 
-        <div id="result"></div>
+        <div id="result" onclick="dispaly()"></div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
